@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sodafy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="Java.js"></script>
+</head>
+
+<body>
+    <!-- HEADER OF THE WEBPAGE -->
+    <header>
+        <logo class="logo">
+            <img src="/Images/logo1.png" alt="logo">
+        </logo>
+        <!-- Navitems menu for window with a size of less than 800px -->
+        <div class="line" onclick="myfunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <!-- Navitems -->
+        <navitems class="navitems" id="navitems">
+            
+            <a href="Home.html">Home</a>
+            <a href="Home.html">About</a>
+            <a href="Home.html">Contact</a>
+            <a href="Home.html">Shop Now</a>
+            <a href="Home.html">Cart</a>
+            <a href="Home.html">Offers</a>
+            <a href="Home.html">Sell</a>
+            <a href="Home.html">Track Your Orders</a>
+            <a href="Home.html">Sign Up</a>
+            <a href="Home.html">Login</a>
+            <a href="Home.html">Guest</a>
+        
+        </navitems>
+        <!-- User Image if user has login to page,Guest image if user hasn't login to page -->
+        <a href="Home.html"><img src="/Images/Guest1.png" alt="User-Image" class="UserImg"></a>
+    </header>
+    <article>
+        <!-- Background Image with WidthControl Through JavaScript -->
+        <img src="/Images/Background.png" alt="Background" id="Background" onload="handleFullWidthSizing()">
+        <!-- Content1 -->
+        <content1 class="Content1">
+            <p class="C1main">Hiettic Thrills Ciinfecihis Coud ouittcity<br><br></p>
+            <p class="C1para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt natus iusto iure
+                distinctio quibusdam necessitatibus.<br><br></p>
+            <button class="C1Button" type="button">Shop Now</button>
+        </content1>
+        <!-- Content2  -->
+        <content2 class="Content2">
+            <p class="C2main">Fleatiauis<br>ju maurmiuttle<br>Aura Huissuemme<br><br></p>
+            <p class="C2para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime quam quidem illum minus
+                porro.<br><br></p>
+            <button class="C2Button" type="button">Read More</button>
+        </content2>
+        <!-- Content3  -->
+        <content3 class="Content3">
+            <!-- First SubContent of Content3  -->
+            <div class="Content3a"><img src="images/Content3transition.jpg"></div>
+            <div class="Content3aback"><img src="images/Content3.jpg"></div>
+            <!-- Second SubContent of Content3 -->
+            <div class="Content3b"><img src="images/Content4.jpg" alt="Content3b"></div>
+            <!-- Third SubContent of Content3  -->
+            <div class="Content3c"><img src="images/content5.png" alt="content3c"></div>
+        </content3>
+    </article>
+    <footer class="footer">
+        <br><br><center>
+        <div class="Para1" style="font-size: 2vw;"> &#169 Copyright to Sodafy</div><br>
+        <div class="Para2" style="font-size: 1vw;">All rights Reserved</div></center>
+    </footer>
+</body>
+
+</html>

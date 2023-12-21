@@ -1,0 +1,202 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	position: relative;
+}
+.wrapper {
+	height: 100vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	perspective: 10px;
+  }
+.slide1{
+	position:relative;
+	height:100%;
+	transform-style: preserve-3d;
+	border:2px solid black;
+	z-index:-1;
+}
+/*#region Header*/
+.header{
+	position:absolute;
+	top:0px;
+	display:flex;
+	width: 100%;
+	height: 50px;
+}
+.current_slide{
+	display: flex;
+	padding-left: 20px;
+	justify-content: left;
+	align-items: center;
+	font-family: 'Yeseva One', serif;
+	color:white;
+	font-size: 27px;
+	width:30%;
+	height: 100%;
+}
+.nav_bar{
+	display: flex;
+	justify-content: right;
+	font-family: 'Playpen Sans', cursive;
+	color:white;
+	width:100%;
+	height:100%
+}
+
+.nav_bar > div{
+	display: flex;
+	padding-left:15px;
+	padding-right:15px;
+	justify-content: center;
+	align-items: center;
+}
+.more{
+	margin: 0px 20px;
+	display: flex;
+	align-items: center;
+}
+.lineContainer{
+	width:100%;
+}
+.bar1,.bar3 {
+    width: 25px;
+    height: 4.4px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.bar2{
+	width: 15px;
+	margin:auto;
+    height: 2px;
+    border-radius: 20px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+.bar1 {
+    transform: translate(0, 0vw) rotate(0deg);
+}
+
+.bar2 {
+    opacity: 100%;
+}
+
+.bar3 {
+    transform: translate(0, 0vw) rotate(0deg);
+}
+
+.change .bar1 {
+    transform: translate(0, 9.5px) rotate(-45deg);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    transform: translate(0, -5px) rotate(45deg);
+}
+/*#endregion*/
+
+/*#region Content*/
+
+.content{
+	position: absolute;
+	width:100%;
+	display: flex;
+	align-items: center;
+	transform-style: preserve-3d;
+	transform: translateY(50%) translateZ(-5px) scale(1.5);
+}
+.ProfileImage{
+	width:40%;
+	height:100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ProfileImagePortal{
+	position: absolute;
+	top:-25px;
+	height:405px;
+	opacity: 0.8;
+	z-index: 2;
+	animation: rotating 5s linear infinite;
+}
+@keyframes rotating {
+	from{
+		transform:rotate(0 deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}
+.ProfilePic{
+	
+	height:350px;
+	z-index:1;
+}
+
+.mainText{
+	width:60%;
+	height:100%;
+	color:white;
+}
+.greeting{
+	text-align: center;
+	font-size: 40px;
+	letter-spacing: 2px;
+	font-family: 'Special Elite',serif;
+}
+.name{
+	text-align: center;
+	font-size:55px;
+	font-family: 'Rye',serif;
+}
+#background{
+	transform:translateZ(-5px) scale(1.5);
+}
+#layer2{
+	transform: translateZ(-2.5px) scale(1.25);
+}
+#background,#layer1,#layer2{
+	position:absolute;
+	z-index:-1;
+}
+#layer1{
+	top:-30px;
+}
+#layer2{
+	top:-57px;
+	left:-25px;
+}
+/*#endregion*/
+
+.slide2{
+	background: #320c0b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position:relative;
+	width:100vw;
+	height:100vh;
+}
+.slide2--back{
+	position:absolute;
+	top:-23vh;
+	width:100vw;
+}
+.slide2--front{
+	position:absolute;
+	top:10vh;
+	right:-5vh;
+	width:80vw;
+	z-index:2;
+}
